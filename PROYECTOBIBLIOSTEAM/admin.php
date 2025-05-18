@@ -296,15 +296,6 @@ $view = isset($_GET['view']) ? $_GET['view'] : 'table';
                         </div>
                         
                         <div class="form-group">
-                            <label for="status">Status</label>
-                            <select id="status" name="status" required>
-                                <option value="Available" <?php echo isset($game['status']) && $game['status'] === 'Available' ? 'selected' : ''; ?>>Available</option>
-                                <option value="On Loan" <?php echo isset($game['status']) && $game['status'] === 'On Loan' ? 'selected' : ''; ?>>On Loan</option>
-                                <option value="Reserved" <?php echo isset($game['status']) && $game['status'] === 'Reserved' ? 'selected' : ''; ?>>Reserved</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
                             <label for="cover_image">Cover Image</label>
                             <input type="file" id="cover_image" name="cover_image">
                             <?php if ($view === 'edit' && !empty($game['image'])): ?>
