@@ -1,0 +1,139 @@
+/* Estilos para los formularios con flip */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.auth-container {
+  position: relative;
+  width: 320px;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.auth-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.auth-card h2 {
+  color: #4a76a8;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-card form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #4a76a8;
+  box-shadow: 0 0 0 2px rgba(74, 118, 168, 0.2);
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a76a8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-card button:hover {
+  background-color: #3a5b8c;
+}
+
+.flip-link {
+  margin-top: 20px;
+  color: #4a76a8;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.flip-link:hover {
+  color: #3a5b8c;
+  text-decoration: underline;
+}
+
+.errores {
+  position: absolute;
+  bottom: 120px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  color: #f44336;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.errores p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .auth-container {
+    width: 100%;
+    max-width: 320px;
+  }
+}

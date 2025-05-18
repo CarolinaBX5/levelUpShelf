@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.game-form {
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.game-form select,
+.game-form button {
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.game-form button {
+    background-color: #e1bee7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-form button:hover {
+    background-color: #e1bee7;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .game-container {
+        flex-direction: row;
+    }
+
+    .game-image {
+        flex: 1;
+    }
+
+    .game-details {
+        flex: 2;
+    }
+}
+
+.game-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4a5568;
+    max-height: 450px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    text-align: justify;
+
+}
+
+.info-section {
+    margin-top: 10px;
+}
+
+.info-section h3 {
+    font-size: 1.3rem;
+    color: #2d3748;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 5px;
+}
+
+
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.platforms .tag {
+    background-color: #ebf4ff;
+    color: #3182ce;
+}
+
+.genres .tag {
+    background-color: #faf5ff;
+    color: #805ad5;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.reviews-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.reviews-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.user-review,
+.other-reviews {
+    margin-bottom: 30px;
+}
+
+.other-reviews{
+    max-height: 230px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.user-review h3,
+.other-reviews h3 {
+    margin-bottom: 15px;
+    color: #4a76a8;
+}
+
+.title-other-reviews{
+    margin-bottom: 15px;
+    color: #4a76a8;
+}
+
+.review-content,
+.review-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+}
+
+.review-date {
+    font-size: 12px;
+    color: #777;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.star {
+    color: #ccc;
+    font-size: 20px;
+}
+
+.star.filled {
+    color: #ffb400;
+}
+
+.star.half-filled {
+    position: relative;
+    color: #ccc;
+}
+
+.star.half-filled:before {
+    content: "★";
+    position: absolute;
+    color: #ffb400;
+    width: 50%;
+    overflow: hidden;
+}
+
+.rating-value {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-text {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.review-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-review,
+.delete-review {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.edit-review {
+    background-color: #4a76a8;
+    color: white;
+}
+
+.edit-review:hover {
+    background-color: #3a5b8c;
+}
+
+.delete-review {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-review:hover {
+    background-color: #d32f2f;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.helpful-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.helpful-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.load-more {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.load-more:hover {
+    background-color: #e0e0e0;
+}
+
+.review-form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.review-form form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.review-form input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.review-form input[type="number"] {
+    width: 150px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.review-form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.review-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .review-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rating {
+        align-self: flex-start;
+    }
+
+    .user-review,
+    .other-reviews {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,185 @@
+
+    .game-footer {
+        position: relative;
+        height: 250px;
+        width: 100%;
+        background: linear-gradient(to bottom, #1a2980, #26d0ce);
+        overflow: hidden;
+        margin-top: 50px;
+        border-top: 4px solid #30475e;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+    }
+
+    .game-footer-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .game-footer-title {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        margin-bottom: 5px;
+    }
+
+    .game-footer-subtitle {
+        color: rgba(255,255,255,0.8);
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .pixel-character {
+        position: absolute;
+        bottom: -50px;
+        animation: character-move 10s linear infinite;
+        z-index: 5;
+    }
+
+    .pixel {
+        position: absolute;
+        box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    @keyframes character-move {
+        0% {
+            transform: translateY(0) translateX(0);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        45% {
+            transform: translateY(-120px) translateX(100px);
+        }
+        50% {
+            transform: translateY(-130px) translateX(120px);
+        }
+        55% {
+            transform: translateY(-120px) translateX(140px);
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-200px) translateX(300px);
+            opacity: 0;
+        }
+    }
+
+    .mountain {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(to top, #4b6cb7, #182848);
+        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        z-index: 1;
+        opacity: 0.7;
+    }
+
+    .cloud {
+        position: absolute;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50%;
+        z-index: 2;
+        animation: cloud-move 30s linear infinite;
+    }
+
+    .cloud:before,
+    .cloud:after {
+        content: '';
+        position: absolute;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50%;
+    }
+
+    .cloud:before {
+        width: 60%;
+        height: 100%;
+        top: -50%;
+        left: 20%;
+    }
+
+    .cloud:after {
+        width: 70%;
+        height: 100%;
+        top: -30%;
+        right: 10%;
+    }
+
+    @keyframes cloud-move {
+        0% {
+            transform: translateX(-100px);
+        }
+        100% {
+            transform: translateX(calc(100vw + 100px));
+        }
+    }
+
+    .star {
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        animation: star-twinkle 3s ease-in-out infinite;
+        z-index: 1;
+    }
+
+    @keyframes star-twinkle {
+        0%, 100% {
+            opacity: 0.2;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.5);
+        }
+    }
+
+    .platform {
+        position: absolute;
+        height: 10px;
+        background: linear-gradient(to bottom, #8B4513, #654321);
+        border-radius: 5px;
+        z-index: 3;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    }
+
+    /* Animación para el título */
+    .game-footer-title {
+        animation: title-glow 2s ease-in-out infinite;
+    }
+
+    @keyframes title-glow {
+        0%, 100% {
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+        }
+        50% {
+            text-shadow: 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,215,0,0.8);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .game-footer {
+            height: 200px;
+        }
+        
+        .game-footer-title {
+            font-size: 20px;
+        }
+        
+        .game-footer-subtitle {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .game-footer {
+            height: 180px;
+        }
+        
+        .game-footer-title {
+            font-size: 18px;
+        }
+    }

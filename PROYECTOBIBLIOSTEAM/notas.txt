@@ -1,0 +1,10 @@
+1. DISEÑOS
+a. estilos Crear liberia y mostrar errores
+e. estilos de games.php cuando no hay juegos
+
+
+
+2. Lógica    
+    a. Página de admin en construcción
+
+    b. Página de Steam placeholder con datos de usuarios. Pero de prueba.
