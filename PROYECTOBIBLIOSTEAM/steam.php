@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "navBar.php";
 // Simulación de datos de usuario logueado
 $logged_in = true; // En una aplicación real, esto vendría de una sesión
